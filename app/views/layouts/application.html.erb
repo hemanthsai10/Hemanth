@@ -9,7 +9,10 @@
   </head>
 
   <body>
-  	<%= render "layouts/page_logo" %>
+  	<header>
+  		<%= render "layouts/page_logo" %>
+	    <%= render "layouts/header" %>
+  	</header>
     <%= yield %>
     <div class="row bottom-rule"></div>
     <footer>
