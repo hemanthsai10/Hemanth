@@ -1,2 +1,42 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<div class="container">
+	<%= form_tag '/admin/reports/upload', multipart: true do %>
+		<div class="col-lg-6 col-sm-6 col-12 form-row">
+		    <h4>Select the file to upload</h4>
+		    <div class="input-group form-row">
+		        <label class="input-group-btn">
+		            <span class="btn btn-primary">
+		                Browse&hellip;
+		                <%= file_field_tag "file", accept: 'text/csv, .csv', style: "display: none;" %>
+		            </span>
+		        </label>
+		        <input type="text" class="form-control" readonly>
+		    </div>
+		    <div class="form-row", style="text-align: right;">
+		  		<%= submit_tag "Submit", class: 'btn btn-primary' %>
+		  	</div>
+		</div>
+	<% end %>
+</div>
+
+<script type="text/javascript">
+	$(function() {
+  $(document).on('change', ':file', function() {
+    var input = $(this),
+        numFiles = input.get(0).files ? input.get(0).files.length : 1,
+        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+    input.trigger('fileselect', [numFiles, label]);
+  });
+
+  $(document).ready( function() {
+      $(':file').on('fileselect', function(event, numFiles, label) {
+          var input = $(this).parents('.input-group').find(':text'),
+              log = numFiles > 1 ? numFiles + ' files selected' : label;
+          if( input.length ) {
+              input.val(log);
+          } else {
+              if( log ) alert(log);
+          }
+      });
+  });
+});
+</script>
