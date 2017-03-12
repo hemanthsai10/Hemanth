@@ -28,8 +28,13 @@ class Admin::ReportsController < ApplicationController
   		puts "here -> #{params['value'].class}"
   		res = Student.where("name LIKE ?","%#{params['value'].downcase}%").pluck(:name,:pin_no)
   		res = Student.where("pin_no LIKE ?","#{params['value'].to_i}%").pluck(:name,:pin_no) if !res.present?
-  		result={}
-  		res.each { |e| result.store(e[1],e[0].split.map(&:capitalize).join(' ')+" ("+(e[1].to_s)+")") }
+  		result=[]
+  		res.each { |e| 
+  			temp_var={}
+  			temp_var.store("label",e[0].split.map(&:capitalize).join(' ')+" ("+(e[1].to_s)+")")
+  			temp_var.store("value",e[1])
+  			result.push(temp_var) 
+  		}
 		render :json => result
   	end
 end

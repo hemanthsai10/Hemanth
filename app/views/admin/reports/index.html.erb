@@ -1,50 +1,28 @@
 <br><br><br><br>
 <div class="form-group">
-<%= text_field_tag 'search', nil, placeholder: 'Search Student (Type Student name or Pin number)', class: "form-control ui-autocomplete-input" %>
-
-
+	<%= text_field_tag 'search', nil,class: "form-row form-control col-md-10 ui-autocomplete-input", placeholder: 'Search Student (Type Student name or Pin number)' %>
 </div>
-
 <br><br><br><br>
+
 <script type="text/javascript">
-
-$("#search").on("input", function() {
-	var fieldVal = $("#search").val();
-			 	 var availableTutorials  = ['a','d','w'];
-
-	if(fieldVal.length > 5)
-	{
-		 $.ajax({
-		    url: "/admin/reports/get_students_list",
-		    type: "POST",
-		    data: { "value": fieldVal },
-		    success: function(resp){
-		    	console.log('check');
-		       console.log(resp);
-		          $( "#search" ).autocomplete({
-              		 source: Object.values(resp)
-          		  });
-		    }
-		  });
-	}
-});
-
-// function display_suggesstions(resp){
-//     $("#topic_title").autocomplete({
-//         source: resp,
-//         minLength: 2,
-//         select: function(event, ui) {
-//             var url = ui.item.id;
-//             if(url != '#') {
-//                 location.href = '/blog/' + url;
-//             }
-//         },
-//         html: true, // optional (jquery.ui.autocomplete.html.js required)
-//       // optional (if other layers overlap autocomplete list)
-//         open: function(event, ui) {
-//             $(".ui-autocomplete").css("z-index", 1000);
-//         }
-//     });
- 
-// }
+	$("#search").on("input", function() {
+		var fieldVal = $("#search").val();
+		if(fieldVal.length > 5)
+		{
+			 $.ajax({
+			    url: "/admin/reports/get_students_list",
+			    type: "POST",
+			    data: { "value": fieldVal },
+			    success: function(resp){
+			       console.log(resp);
+			          $( "#search" ).autocomplete({
+	              		 source: resp,
+	              		 select: function (e, ui) { 
+	              		 	window.location.href = "/students/"+ui.item.value;
+	              		 }
+	          		  });
+			    }
+			  });
+		}
+	});
 </script>
