@@ -7,7 +7,12 @@ Rails.application.routes.draw do
   		get :update, :on => :member
   		get :index, :on => :member
   		post :upload, :on => :collection
-	end
+	 end
   end
+  resources :students do
+      get :reports, :on => :collection
+      get :index, :on => :member
+  end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

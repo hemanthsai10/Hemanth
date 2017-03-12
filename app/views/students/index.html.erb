@@ -18,7 +18,7 @@
 			          $( "#search" ).autocomplete({
 	              		 source: resp,
 	              		 select: function (e, ui) { 
-	              		 	window.location.href = "/students/reports/"+ui.item.value;
+	              		 	window.location.href = "/students/reports?pin_num="+ui.item.value;
 	              		 }
 	          		  });
 			    }
