@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   	get 'pages/index'
  	root 'pages#index'
-
   namespace :admin do
   	resources :reports do
+   		post :get_students_list, :on => :collection
   		get :update, :on => :member
   		get :index, :on => :member
   		post :upload, :on => :collection

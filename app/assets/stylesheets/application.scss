@@ -286,4 +286,9 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
  *
  *= require_tree .
  *= require_self
+ *= require jquery-ui
+
  */
+//= require jquery
+//= require jquery-ui
+//= require jquery_ujs

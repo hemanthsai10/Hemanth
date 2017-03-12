@@ -61,3 +61,4 @@ gem 'rails-assets-tether', '~> 1.1', '>= 1.1.1' #Tether for Bootstrap
 
 gem 'elasticsearch-model' #Elastic search
 gem 'elasticsearch-rails' #Elastic search
+gem "jquery-ui-rails" #jquery ui

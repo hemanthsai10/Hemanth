@@ -1,10 +1,10 @@
 class CreateStudents < ActiveRecord::Migration[5.0]
   def change
     create_table :students do |t|
-		t.integer :PIN_NO, :limit => 8
-    	t.string :Section
-    	t.string :NAME_OF_THE_STUDENT
-    	t.float :CGPA
+		t.integer :pin_no, :limit => 8
+    	t.string :section
+    	t.string :name
+    	t.float :cgpa
         t.float :I_Sem
         t.float :II_Sem
         t.float :III_Sem
@@ -70,20 +70,20 @@ class CreateStudents < ActiveRecord::Migration[5.0]
         t.float :Sub7_Avg
         t.float :Sub7_Assign
         t.float :Sub7_Total
-    	t.integer :Parent_Cont_No
+    	t.integer :Parent_Cont_No, :limit => 8
         t.string :Parent_Mail_id
         t.string :AMC_Name
         t.integer :AMC_Cont_No
-        t.string :Student_Mail_Id
-        t.integer :Student_Cont_No
+        t.string :student_mail_id
+        t.integer :student_cont_no, :limit => 8
         t.string :Placement_status
         t.string :Placed_in
         t.float :sal_package_in_lakhs
         t.float :SSC
         t.float :Inter
         t.string :Intermidiate_College_Name
-        t.string :Location
-        t.string :City
+        t.string :location
+        t.string :city
     	t.timestamps
     end
   end
