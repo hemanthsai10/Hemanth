@@ -58,3 +58,6 @@ gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
 gem 'rails-assets-tether', '~> 1.1', '>= 1.1.1' #Tether for Bootstrap
+
+gem 'elasticsearch-model' #Elastic search
+gem 'elasticsearch-rails' #Elastic search

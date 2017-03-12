@@ -21,5 +21,6 @@ class Admin::ReportsController < ApplicationController
     end
 
 	def index
+		
   	end
 end

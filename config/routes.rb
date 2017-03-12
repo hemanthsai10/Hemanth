@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   namespace :admin do
   	resources :reports do
   		get :update, :on => :member
+  		get :index, :on => :member
   		post :upload, :on => :collection
 	end
   end
