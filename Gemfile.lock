@@ -103,6 +103,7 @@ GEM
     pg (0.19.0-x64-mingw32)
     puma (3.7.1)
     rack (2.0.1)
+    rack-cors (0.4.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.1)
@@ -186,6 +187,7 @@ DEPENDENCIES
   libv8 (~> 3.11.8.3)
   pg
   puma (~> 3.0)
+  rack-cors
   rails (~> 5.0.1)
   rails-assets-tether (~> 1.1, >= 1.1.1)
   rails_12factor
