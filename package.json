@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "typescript": "^1.8.10",
-    "typings":"^0.7.12"
+    "typings":"^0.7.12",
+     "bower": "^1.5.2"
   }
 }
