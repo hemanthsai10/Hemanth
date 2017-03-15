@@ -12,3 +12,4 @@ Rails.application.config.assets.version = '1.0'
 
 #Precompiling assests
 Rails.application.config.assets.precompile += %w( pages.css )
+Rails.application.config.assets.precompile += %w( pages.js )
