@@ -66,3 +66,6 @@ gem 'elasticsearch-rails' #Elastic search
 gem "jquery-ui-rails" #jquery ui
 
 gem 'rack-cors' #For angular and react
+gem 'bower-rails'
+gem 'angularjs-rails'
+gem 'angular-rails-templates'

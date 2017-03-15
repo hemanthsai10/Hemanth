@@ -13,10 +13,12 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
-//= require turbolinks
 //= require tether
+//= require angular
+//= require angular-route
+//= require angular-rails-templates
 //= require bootstrap
-//= require_tree .
+//= require_tree ../templates
 
 $(document).ready(function(){ 
     var touch 	= $('#touch-menu');
