@@ -5,7 +5,9 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings",
-    "postinstall": "bower cache clean && bower install"
+    "start": "node node_modules/grunt-cli/bin/grunt",
+    "test": "node node_modules/grunt-cli/bin/grunt test",
+    "postinstall": "./node_modules/bower/bin/bower install"
   },
   "license": "ISC",
   "dependencies": {
