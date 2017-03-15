@@ -5,7 +5,8 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings",
-    "postinstall": "typings install"
+    "postinstall": "typings install",
+    "postinstall": "./node_modules/bower/bin/bower install"
   },
   "license": "ISC",
   "dependencies": {
