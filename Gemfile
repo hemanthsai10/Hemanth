@@ -13,7 +13,6 @@ gem 'pg'
 # Use Puma as the app server
 
 	gem 'sqlite3', group: :development # Added development group.
-  gem 'pg', group: :production # Added postgres and made it production only.
   gem 'rails_12factor'
 
 

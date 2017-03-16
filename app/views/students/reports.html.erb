@@ -1,1 +1,47 @@
-<%= Student.find_by(:pin_no => params['pin_num'].to_i).inspect %>
+<%= std=Student.find_by(:pin_no => params['pin_num'].to_i) %>
+<!DOCTYPE html>
+<html ng-app="reportApp">
+  <body class="list-group" ng-controller="ReportController as report">
+      <section class="tab" ng-controller="TabController as tab">
+		 <ul class="nav nav-pills">
+		  <li ng-class="{ active: tab.isSet(1) }">
+		    <a href ng-click="tab.setTab(1)">Personal Data</a></li>
+		  <li ng-class="{ active: tab.isSet(2) }">
+		    <a href ng-click="tab.setTab(2)">Specs</a></li>
+		  <li ng-class="{ active: tab.isSet(3) }">
+		    <a href ng-click="tab.setTab(3)">Reviews</a></li>
+		</ul>
+        <div ng-show="tab.isSet(1)">
+        	<%= std.pin_no %>
+        </div>
+        <div ng-show="tab.isSet(2)">
+        	<%= std.name %>
+        </div>
+        <div ng-show="tab.isSet(3)">
+        	<%= std.Placement_status %>
+        </div>
+      </section>
+  </body>
+</html>
+<script type="text/javascript">
+(function() {
+  var app = angular.module('reportApp', []);
+
+  app.controller('ReportController', function(){
+  });
+
+  app.controller('TabController', function(){
+    this.tab = 1;
+
+    this.setTab = function(newValue){
+      this.tab = newValue;
+    };
+
+    this.isSet = function(tabName){
+      return this.tab === tabName;
+    };
+  });
+
+})();
+
+</script>
