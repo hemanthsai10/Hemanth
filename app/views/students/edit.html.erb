@@ -1,6 +1,9 @@
-<h1>Editing Student</h1>
-
+<div class="pull-right">
+<%= link_to '<span class="btn btn-info btn-lg"><i class="glyphicon glyphicon-info-sign"></i> Show</span>'.html_safe, @student %> |
+<%= link_to '<button type="button" class="btn btn-info btn-lg">
+                <span class="btn-label"><i class="glyphicon glyphicon-chevron-left"></i></span>Back</button>'.html_safe, students_path %>
+</div>
+<h2>Editing Student - <%= @student.name.capitalize %></h2>
 <%= render 'form', student: @student %>
 
-<%= link_to 'Show', @student %> |
-<%= link_to 'Back', students_path %>
+

@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_for(student) do |f| %>
   <% if student.errors.any? %>
     <div id="error_explanation">
@@ -11,422 +12,429 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :pin_no %>
-    <%= f.number_field :pin_no %>
+  <div class="form-row form-group field">
+    <%= f.label :pin_no, class:"col-md-6 control-label" %>
+    <%= f.number_field :pin_no, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :section %>
-    <%= f.text_field :section %>
+  <div class="form-row form-group field">
+    <%= f.label :section, class:"col-md-6 control-label" %>
+    <%= f.text_field :section, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="form-row form-group field">
+    <%= f.label :name, class:"col-md-6 control-label" %>
+    <%= f.text_field :name, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :cgpa %>
-    <%= f.text_field :cgpa %>
+  <div class="form-row form-group field">
+    <%= f.label :cgpa, class:"col-md-6 control-label" %>
+    <%= f.text_field :cgpa, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :i_sem %>
-    <%= f.text_field :i_sem %>
+  <div class="form-row form-group field">
+    <%= f.label :parent_cont_no, class:"col-md-6 control-label" %>
+    <%= f.number_field :parent_cont_no, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :ii_sem %>
-    <%= f.text_field :ii_sem %>
+  <div class="form-row form-group field">
+    <%= f.label :parent_mail_id, class:"col-md-6 control-label" %>
+    <%= f.text_field :parent_mail_id, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :iii_sem %>
-    <%= f.text_field :iii_sem %>
+  <div class="form-row form-group field">
+    <%= f.label :amc_name, class:"col-md-6 control-label" %>
+    <%= f.text_field :amc_name, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :iv_sem %>
-    <%= f.text_field :iv_sem %>
+  <div class="form-row form-group field">
+    <%= f.label :amc_cont_no, class:"col-md-6 control-label" %>
+    <%= f.number_field :amc_cont_no, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :v_sem %>
-    <%= f.text_field :v_sem %>
+  <div class="form-row form-group field">
+    <%= f.label :student_mail_id, class:"col-md-6 control-label" %>
+    <%= f.text_field :student_mail_id, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :vi_sem %>
-    <%= f.text_field :vi_sem %>
+  <div class="form-row form-group field">
+    <%= f.label :student_cont_no, class:"col-md-6 control-label" %>
+    <%= f.number_field :student_cont_no, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :vii_sem %>
-    <%= f.text_field :vii_sem %>
+  <div class="form-row form-group field">
+    <%= f.label :placement_status, class:"col-md-6 control-label" %>
+    <%= f.text_field :placement_status, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :viii_sem %>
-    <%= f.text_field :viii_sem %>
+  <div class="form-row form-group field">
+    <%= f.label :placed_in, class:"col-md-6 control-label" %>
+    <%= f.text_field :placed_in, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :i_sem_attd %>
-    <%= f.text_field :i_sem_attd %>
+  <div class="form-row form-group field">
+    <%= f.label :sal_package_in_lakhs, class:"col-md-6 control-label" %>
+    <%= f.text_field :sal_package_in_lakhs, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :ii_sem_attd %>
-    <%= f.text_field :ii_sem_attd %>
+  <div class="form-row form-group field">
+    <%= f.label :ssc, class:"col-md-6 control-label" %>
+    <%= f.text_field :ssc, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :iii_sem_attd %>
-    <%= f.text_field :iii_sem_attd %>
+  <div class="form-row form-group field">
+    <%= f.label :inter, class:"col-md-6 control-label" %>
+    <%= f.text_field :inter, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :iv_sem_attd %>
-    <%= f.text_field :iv_sem_attd %>
+  <div class="form-row form-group field">
+    <%= f.label :intermidiate_college_name, class:"col-md-6 control-label" %>
+    <%= f.text_field :intermidiate_college_name, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :v_sem_attd %>
-    <%= f.text_field :v_sem_attd %>
+  <div class="form-row form-group field">
+    <%= f.label :location, class:"col-md-6 control-label" %>
+    <%= f.text_field :location, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :vi_sem_attd %>
-    <%= f.text_field :vi_sem_attd %>
+  <div class="form-row form-group field">
+    <%= f.label :city, class:"col-md-6 control-label" %>
+    <%= f.text_field :city, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :vii_sem_attd %>
-    <%= f.text_field :vii_sem_attd %>
+  <div class="form-row form-group field">
+    <%= f.label :i_sem, class:"col-md-6 control-label" %>
+    <%= f.text_field :i_sem, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :viii_sem_attd %>
-    <%= f.text_field :viii_sem_attd %>
+  <div class="form-row form-group field">
+    <%= f.label :ii_sem, class:"col-md-6 control-label" %>
+    <%= f.text_field :ii_sem, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub1_name %>
-    <%= f.text_field :sub1_name %>
+  <div class="form-row form-group field">
+    <%= f.label :iii_sem, class:"col-md-6 control-label" %>
+    <%= f.text_field :iii_sem, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub1_mid1 %>
-    <%= f.text_field :sub1_mid1 %>
+  <div class="form-row form-group field">
+    <%= f.label :iv_sem, class:"col-md-6 control-label" %>
+    <%= f.text_field :iv_sem, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub1_mid2 %>
-    <%= f.text_field :sub1_mid2 %>
+  <div class="form-row form-group field">
+    <%= f.label :v_sem, class:"col-md-6 control-label" %>
+    <%= f.text_field :v_sem, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub1_mid3 %>
-    <%= f.text_field :sub1_mid3 %>
+  <div class="form-row form-group field">
+    <%= f.label :vi_sem, class:"col-md-6 control-label" %>
+    <%= f.text_field :vi_sem, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub1_avg %>
-    <%= f.text_field :sub1_avg %>
+  <div class="form-row form-group field">
+    <%= f.label :vii_sem, class:"col-md-6 control-label" %>
+    <%= f.text_field :vii_sem, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub1_asign %>
-    <%= f.text_field :sub1_asign %>
+  <div class="form-row form-group field">
+    <%= f.label :viii_sem, class:"col-md-6 control-label" %>
+    <%= f.text_field :viii_sem, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub1_Total %>
-    <%= f.text_field :sub1_Total %>
+  <div class="form-row form-group field">
+    <%= f.label :i_sem_attd, class:"col-md-6 control-label" %>
+    <%= f.text_field :i_sem_attd, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub2_name %>
-    <%= f.text_field :sub2_name %>
+  <div class="form-row form-group field">
+    <%= f.label :ii_sem_attd, class:"col-md-6 control-label" %>
+    <%= f.text_field :ii_sem_attd, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub2_mid1 %>
-    <%= f.text_field :sub2_mid1 %>
+  <div class="form-row form-group field">
+    <%= f.label :iii_sem_attd, class:"col-md-6 control-label" %>
+    <%= f.text_field :iii_sem_attd, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub2_mid2 %>
-    <%= f.text_field :sub2_mid2 %>
+  <div class="form-row form-group field">
+    <%= f.label :iv_sem_attd, class:"col-md-6 control-label" %>
+    <%= f.text_field :iv_sem_attd, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub2_mid3 %>
-    <%= f.text_field :sub2_mid3 %>
+  <div class="form-row form-group field">
+    <%= f.label :v_sem_attd, class:"col-md-6 control-label" %>
+    <%= f.text_field :v_sem_attd, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub2_avg %>
-    <%= f.text_field :sub2_avg %>
+  <div class="form-row form-group field">
+    <%= f.label :vi_sem_attd, class:"col-md-6 control-label" %>
+    <%= f.text_field :vi_sem_attd, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub2_asign %>
-    <%= f.text_field :sub2_asign %>
+  <div class="form-row form-group field">
+    <%= f.label :vii_sem_attd, class:"col-md-6 control-label" %>
+    <%= f.text_field :vii_sem_attd, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub2_Total %>
-    <%= f.text_field :sub2_Total %>
+  <div class="form-row form-group field">
+    <%= f.label :viii_sem_attd, class:"col-md-6 control-label" %>
+    <%= f.text_field :viii_sem_attd, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub3_name %>
-    <%= f.text_field :sub3_name %>
+  <div class="form-row form-group field">
+    <%= f.label :sub1_name, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub1_name, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub3_mid1 %>
-    <%= f.text_field :sub3_mid1 %>
+  <div class="form-row form-group field">
+    <%= f.label :sub1_mid1, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub1_mid1, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub3_mid2 %>
-    <%= f.text_field :sub3_mid2 %>
+  <div class="form-row form-group field">
+    <%= f.label :sub1_mid2, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub1_mid2, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub3_mid3 %>
-    <%= f.text_field :sub3_mid3 %>
+  <div class="form-row form-group field">
+    <%= f.label :sub1_mid3, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub1_mid3, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub3_avg %>
-    <%= f.text_field :sub3_avg %>
+  <div class="form-row form-group field">
+    <%= f.label :sub1_avg, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub1_avg, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub3_asign %>
-    <%= f.text_field :sub3_asign %>
+  <div class="form-row form-group field">
+    <%= f.label :sub1_asign, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub1_asign, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub3_Total %>
-    <%= f.text_field :sub3_Total %>
+  <div class="form-row form-group field">
+    <%= f.label :sub1_Total, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub1_Total, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub4_name %>
-    <%= f.text_field :sub4_name %>
+  <div class="form-row form-group field">
+    <%= f.label :sub2_name, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub2_name, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub4_mid1 %>
-    <%= f.text_field :sub4_mid1 %>
+  <div class="form-row form-group field">
+    <%= f.label :sub2_mid1, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub2_mid1, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub4_mid2 %>
-    <%= f.text_field :sub4_mid2 %>
+  <div class="form-row form-group field">
+    <%= f.label :sub2_mid2, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub2_mid2, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub4_mid3 %>
-    <%= f.text_field :sub4_mid3 %>
+  <div class="form-row form-group field">
+    <%= f.label :sub2_mid3, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub2_mid3, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub4_avg %>
-    <%= f.text_field :sub4_avg %>
+  <div class="form-row form-group field">
+    <%= f.label :sub2_avg, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub2_avg, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub4_asign %>
-    <%= f.text_field :sub4_asign %>
+  <div class="form-row form-group field">
+    <%= f.label :sub2_asign, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub2_asign, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub4_Total %>
-    <%= f.text_field :sub4_Total %>
+  <div class="form-row form-group field">
+    <%= f.label :sub2_Total, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub2_Total, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub5_name %>
-    <%= f.text_field :sub5_name %>
+  <div class="form-row form-group field">
+    <%= f.label :sub3_name, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub3_name, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub5_mid1 %>
-    <%= f.text_field :sub5_mid1 %>
+  <div class="form-row form-group field">
+    <%= f.label :sub3_mid1, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub3_mid1, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub5_mid2 %>
-    <%= f.text_field :sub5_mid2 %>
+  <div class="form-row form-group field">
+    <%= f.label :sub3_mid2, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub3_mid2, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub5_mid3 %>
-    <%= f.text_field :sub5_mid3 %>
+  <div class="form-row form-group field">
+    <%= f.label :sub3_mid3, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub3_mid3, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub5_avg %>
-    <%= f.text_field :sub5_avg %>
+  <div class="form-row form-group field">
+    <%= f.label :sub3_avg, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub3_avg, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub5_asign %>
-    <%= f.text_field :sub5_asign %>
+  <div class="form-row form-group field">
+    <%= f.label :sub3_asign, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub3_asign, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub5_Total %>
-    <%= f.text_field :sub5_Total %>
+  <div class="form-row form-group field">
+    <%= f.label :sub3_Total, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub3_Total, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub6_name %>
-    <%= f.text_field :sub6_name %>
+  <div class="form-row form-group field">
+    <%= f.label :sub4_name, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub4_name, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub6_mid1 %>
-    <%= f.text_field :sub6_mid1 %>
+  <div class="form-row form-group field">
+    <%= f.label :sub4_mid1, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub4_mid1, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub6_mid2 %>
-    <%= f.text_field :sub6_mid2 %>
+  <div class="form-row form-group field">
+    <%= f.label :sub4_mid2, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub4_mid2, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub6_mid3 %>
-    <%= f.text_field :sub6_mid3 %>
+  <div class="form-row form-group field">
+    <%= f.label :sub4_mid3, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub4_mid3, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub6_avg %>
-    <%= f.text_field :sub6_avg %>
+  <div class="form-row form-group field">
+    <%= f.label :sub4_avg, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub4_avg, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub6_asign %>
-    <%= f.text_field :sub6_asign %>
+  <div class="form-row form-group field">
+    <%= f.label :sub4_asign, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub4_asign, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub6_Total %>
-    <%= f.text_field :sub6_Total %>
+  <div class="form-row form-group field">
+    <%= f.label :sub4_Total, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub4_Total, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub7_name %>
-    <%= f.text_field :sub7_name %>
+  <div class="form-row form-group field">
+    <%= f.label :sub5_name, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub5_name, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub7_mid1 %>
-    <%= f.text_field :sub7_mid1 %>
+  <div class="form-row form-group field">
+    <%= f.label :sub5_mid1, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub5_mid1, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub7_mid2 %>
-    <%= f.text_field :sub7_mid2 %>
+  <div class="form-row form-group field">
+    <%= f.label :sub5_mid2, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub5_mid2, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub7_mid3 %>
-    <%= f.text_field :sub7_mid3 %>
+  <div class="form-row form-group field">
+    <%= f.label :sub5_mid3, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub5_mid3, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub7_avg %>
-    <%= f.text_field :sub7_avg %>
+  <div class="form-row form-group field">
+    <%= f.label :sub5_avg, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub5_avg, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub7_asign %>
-    <%= f.text_field :sub7_asign %>
+  <div class="form-row form-group field">
+    <%= f.label :sub5_asign, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub5_asign, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub7_Total %>
-    <%= f.text_field :sub7_Total %>
+  <div class="form-row form-group field">
+    <%= f.label :sub5_Total, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub5_Total, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :parent_cont_no %>
-    <%= f.number_field :parent_cont_no %>
+  <div class="form-row form-group field">
+    <%= f.label :sub6_name, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub6_name, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :parent_mail_id %>
-    <%= f.text_field :parent_mail_id %>
+  <div class="form-row form-group field">
+    <%= f.label :sub6_mid1, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub6_mid1, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :amc_name %>
-    <%= f.text_field :amc_name %>
+  <div class="form-row form-group field">
+    <%= f.label :sub6_mid2, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub6_mid2, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :amc_cont_no %>
-    <%= f.number_field :amc_cont_no %>
+  <div class="form-row form-group field">
+    <%= f.label :sub6_mid3, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub6_mid3, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :student_mail_id %>
-    <%= f.text_field :student_mail_id %>
+  <div class="form-row form-group field">
+    <%= f.label :sub6_avg, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub6_avg, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :student_cont_no %>
-    <%= f.number_field :student_cont_no %>
+  <div class="form-row form-group field">
+    <%= f.label :sub6_asign, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub6_asign, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :placement_status %>
-    <%= f.text_field :placement_status %>
+  <div class="form-row form-group field">
+    <%= f.label :sub6_Total, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub6_Total, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :placed_in %>
-    <%= f.text_field :placed_in %>
+  <div class="form-row form-group field">
+    <%= f.label :sub7_name, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub7_name, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :sal_package_in_lakhs %>
-    <%= f.text_field :sal_package_in_lakhs %>
+  <div class="form-row form-group field">
+    <%= f.label :sub7_mid1, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub7_mid1, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :ssc %>
-    <%= f.text_field :ssc %>
+  <div class="form-row form-group field">
+    <%= f.label :sub7_mid2, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub7_mid2, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :inter %>
-    <%= f.text_field :inter %>
+  <div class="form-row form-group field">
+    <%= f.label :sub7_mid3, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub7_mid3, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :intermidiate_college_name %>
-    <%= f.text_field :intermidiate_college_name %>
+  <div class="form-row form-group field">
+    <%= f.label :sub7_avg, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub7_avg, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :location %>
-    <%= f.text_field :location %>
+  <div class="form-row form-group field">
+    <%= f.label :sub7_asign, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub7_asign, class:"col-md-4 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :city %>
-    <%= f.text_field :city %>
+  <div class="form-row form-group field">
+    <%= f.label :sub7_Total, class:"col-md-6 control-label" %>
+    <%= f.text_field :sub7_Total, class:"col-md-4 form-control" %>
   </div>
-
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+  <center>
   <div class="actions">
-    <%= f.submit %>
+    <%= button_tag(type: "submit", class: "btn btn-labeled btn-success") do %>
+ <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span> Update Info
+    <% end %> 
   </div>
+    </center>
 <% end %>
+</div>
+<br><br>
