@@ -1,28 +1,191 @@
-<br><br><br><br>
-<div class="form-group">
-	<%= text_field_tag 'search', nil,class: "form-row form-control col-md-10 ui-autocomplete-input", placeholder: 'Search Student (Type Student name or Pin number)' %>
-</div>
-<br><br><br><br>
+<p id="notice"><%= notice %></p>
 
-<script type="text/javascript">
-	$("#search").on("input", function() {
-		var fieldVal = $("#search").val();
-		if(fieldVal.length > 5)
-		{
-			 $.ajax({
-			    url: "/admin/reports/get_students_list",
-			    type: "POST",
-			    data: { "value": fieldVal },
-			    success: function(resp){
-			       console.log(resp);
-			          $( "#search" ).autocomplete({
-	              		 source: resp,
-	              		 select: function (e, ui) { 
-	              		 	window.location.href = "/students/reports?pin_num="+ui.item.value;
-	              		 }
-	          		  });
-			    }
-			  });
-		}
-	});
-</script>
+<h1>Students</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pin no</th>
+      <th>Section</th>
+      <th>Name</th>
+      <th>Cgpa</th>
+      <th>I sem</th>
+      <th>Ii sem</th>
+      <th>Iii sem</th>
+      <th>Iv sem</th>
+      <th>V sem</th>
+      <th>Vi sem</th>
+      <th>Vii sem</th>
+      <th>Viii sem</th>
+      <th>I sem attd</th>
+      <th>Ii sem attd</th>
+      <th>Iii sem attd</th>
+      <th>Iv sem attd</th>
+      <th>V sem attd</th>
+      <th>Vi sem attd</th>
+      <th>Vii sem attd</th>
+      <th>Viii sem attd</th>
+      <th>Sub1 name</th>
+      <th>Sub1 mid1</th>
+      <th>Sub1 mid2</th>
+      <th>Sub1 mid3</th>
+      <th>Sub1 avg</th>
+      <th>Sub1 asign</th>
+      <th>Sub1 total</th>
+      <th>Sub2 name</th>
+      <th>Sub2 mid1</th>
+      <th>Sub2 mid2</th>
+      <th>Sub2 mid3</th>
+      <th>Sub2 avg</th>
+      <th>Sub2 asign</th>
+      <th>Sub2 total</th>
+      <th>Sub3 name</th>
+      <th>Sub3 mid1</th>
+      <th>Sub3 mid2</th>
+      <th>Sub3 mid3</th>
+      <th>Sub3 avg</th>
+      <th>Sub3 asign</th>
+      <th>Sub3 total</th>
+      <th>Sub4 name</th>
+      <th>Sub4 mid1</th>
+      <th>Sub4 mid2</th>
+      <th>Sub4 mid3</th>
+      <th>Sub4 avg</th>
+      <th>Sub4 asign</th>
+      <th>Sub4 total</th>
+      <th>Sub5 name</th>
+      <th>Sub5 mid1</th>
+      <th>Sub5 mid2</th>
+      <th>Sub5 mid3</th>
+      <th>Sub5 avg</th>
+      <th>Sub5 asign</th>
+      <th>Sub5 total</th>
+      <th>Sub6 name</th>
+      <th>Sub6 mid1</th>
+      <th>Sub6 mid2</th>
+      <th>Sub6 mid3</th>
+      <th>Sub6 avg</th>
+      <th>Sub6 asign</th>
+      <th>Sub6 total</th>
+      <th>Sub7 name</th>
+      <th>Sub7 mid1</th>
+      <th>Sub7 mid2</th>
+      <th>Sub7 mid3</th>
+      <th>Sub7 avg</th>
+      <th>Sub7 asign</th>
+      <th>Sub7 total</th>
+      <th>Parent cont no</th>
+      <th>Parent mail</th>
+      <th>Amc name</th>
+      <th>Amc cont no</th>
+      <th>Student mail</th>
+      <th>Student cont no</th>
+      <th>Placement status</th>
+      <th>Placed in</th>
+      <th>Sal package in lakhs</th>
+      <th>Ssc</th>
+      <th>Inter</th>
+      <th>Intermidiate college name</th>
+      <th>Location</th>
+      <th>City</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student.pin_no %></td>
+        <td><%= student.section %></td>
+        <td><%= student.name %></td>
+        <td><%= student.cgpa %></td>
+        <td><%= student.i_sem %></td>
+        <td><%= student.ii_sem %></td>
+        <td><%= student.iii_sem %></td>
+        <td><%= student.iv_sem %></td>
+        <td><%= student.v_sem %></td>
+        <td><%= student.vi_sem %></td>
+        <td><%= student.vii_sem %></td>
+        <td><%= student.viii_sem %></td>
+        <td><%= student.i_sem_attd %></td>
+        <td><%= student.ii_sem_attd %></td>
+        <td><%= student.iii_sem_attd %></td>
+        <td><%= student.iv_sem_attd %></td>
+        <td><%= student.v_sem_attd %></td>
+        <td><%= student.vi_sem_attd %></td>
+        <td><%= student.vii_sem_attd %></td>
+        <td><%= student.viii_sem_attd %></td>
+        <td><%= student.sub1_name %></td>
+        <td><%= student.sub1_mid1 %></td>
+        <td><%= student.sub1_mid2 %></td>
+        <td><%= student.sub1_mid3 %></td>
+        <td><%= student.sub1_avg %></td>
+        <td><%= student.sub1_asign %></td>
+        <td><%= student.sub1_Total %></td>
+        <td><%= student.sub2_name %></td>
+        <td><%= student.sub2_mid1 %></td>
+        <td><%= student.sub2_mid2 %></td>
+        <td><%= student.sub2_mid3 %></td>
+        <td><%= student.sub2_avg %></td>
+        <td><%= student.sub2_asign %></td>
+        <td><%= student.sub2_Total %></td>
+        <td><%= student.sub3_name %></td>
+        <td><%= student.sub3_mid1 %></td>
+        <td><%= student.sub3_mid2 %></td>
+        <td><%= student.sub3_mid3 %></td>
+        <td><%= student.sub3_avg %></td>
+        <td><%= student.sub3_asign %></td>
+        <td><%= student.sub3_Total %></td>
+        <td><%= student.sub4_name %></td>
+        <td><%= student.sub4_mid1 %></td>
+        <td><%= student.sub4_mid2 %></td>
+        <td><%= student.sub4_mid3 %></td>
+        <td><%= student.sub4_avg %></td>
+        <td><%= student.sub4_asign %></td>
+        <td><%= student.sub4_Total %></td>
+        <td><%= student.sub5_name %></td>
+        <td><%= student.sub5_mid1 %></td>
+        <td><%= student.sub5_mid2 %></td>
+        <td><%= student.sub5_mid3 %></td>
+        <td><%= student.sub5_avg %></td>
+        <td><%= student.sub5_asign %></td>
+        <td><%= student.sub5_Total %></td>
+        <td><%= student.sub6_name %></td>
+        <td><%= student.sub6_mid1 %></td>
+        <td><%= student.sub6_mid2 %></td>
+        <td><%= student.sub6_mid3 %></td>
+        <td><%= student.sub6_avg %></td>
+        <td><%= student.sub6_asign %></td>
+        <td><%= student.sub6_Total %></td>
+        <td><%= student.sub7_name %></td>
+        <td><%= student.sub7_mid1 %></td>
+        <td><%= student.sub7_mid2 %></td>
+        <td><%= student.sub7_mid3 %></td>
+        <td><%= student.sub7_avg %></td>
+        <td><%= student.sub7_asign %></td>
+        <td><%= student.sub7_Total %></td>
+        <td><%= student.parent_cont_no %></td>
+        <td><%= student.parent_mail_id %></td>
+        <td><%= student.amc_name %></td>
+        <td><%= student.amc_cont_no %></td>
+        <td><%= student.student_mail_id %></td>
+        <td><%= student.student_cont_no %></td>
+        <td><%= student.placement_status %></td>
+        <td><%= student.placed_in %></td>
+        <td><%= student.sal_package_in_lakhs %></td>
+        <td><%= student.ssc %></td>
+        <td><%= student.inter %></td>
+        <td><%= student.intermidiate_college_name %></td>
+        <td><%= student.location %></td>
+        <td><%= student.city %></td>
+        <td><%= link_to 'Show', student %></td>
+        <td><%= link_to 'Edit', edit_student_path(student) %></td>
+        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Student', new_student_path %>

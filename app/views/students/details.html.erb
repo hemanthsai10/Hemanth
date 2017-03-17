@@ -1,0 +1,29 @@
+<br><br><br><br>
+<div class="form-group">
+    <%= text_field_tag 'search', nil,class: "form-row form-control col-md-10 ui-autocomplete-input", placeholder: 'Search Student (Type Student name or Pin number)' %>
+</div>
+<br><br><br><br>
+<p id="notice"><%= notice %></p>
+
+<script type="text/javascript">
+    $("#search").on("input", function() {
+        var fieldVal = $("#search").val();
+        if(fieldVal.length > 5)
+        {
+             $.ajax({
+                url: "/admin/reports/get_students_list",
+                type: "POST",
+                data: { "value": fieldVal },
+                success: function(resp){
+                   console.log(resp);
+                      $( "#search" ).autocomplete({
+                           source: resp,
+                           select: function (e, ui) { 
+                               window.location.href = "/students/"+ui.item.value;
+                           }
+                        });
+                }
+              });
+        }
+    });
+</script>

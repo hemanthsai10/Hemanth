@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
   resources :students do
       get :reports, :on => :collection
-      get :index, :on => :member
+      get :details, :on => :collection
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

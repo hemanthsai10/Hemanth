@@ -15,3 +15,5 @@ Rails.application.config.assets.paths << Rails.root.join('vendor', 'assets', 'bo
 
 Rails.application.config.assets.precompile += %w( pages.css )
 Rails.application.config.assets.precompile += %w( pages.js )
+Rails.application.config.assets.precompile += %w( students.css )
+Rails.application.config.assets.precompile += %w( students.js )

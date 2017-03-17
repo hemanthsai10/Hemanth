@@ -1,0 +1,432 @@
+<%= form_for(student) do |f| %>
+  <% if student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pin_no %>
+    <%= f.number_field :pin_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :section %>
+    <%= f.text_field :section %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cgpa %>
+    <%= f.text_field :cgpa %>
+  </div>
+
+  <div class="field">
+    <%= f.label :i_sem %>
+    <%= f.text_field :i_sem %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ii_sem %>
+    <%= f.text_field :ii_sem %>
+  </div>
+
+  <div class="field">
+    <%= f.label :iii_sem %>
+    <%= f.text_field :iii_sem %>
+  </div>
+
+  <div class="field">
+    <%= f.label :iv_sem %>
+    <%= f.text_field :iv_sem %>
+  </div>
+
+  <div class="field">
+    <%= f.label :v_sem %>
+    <%= f.text_field :v_sem %>
+  </div>
+
+  <div class="field">
+    <%= f.label :vi_sem %>
+    <%= f.text_field :vi_sem %>
+  </div>
+
+  <div class="field">
+    <%= f.label :vii_sem %>
+    <%= f.text_field :vii_sem %>
+  </div>
+
+  <div class="field">
+    <%= f.label :viii_sem %>
+    <%= f.text_field :viii_sem %>
+  </div>
+
+  <div class="field">
+    <%= f.label :i_sem_attd %>
+    <%= f.text_field :i_sem_attd %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ii_sem_attd %>
+    <%= f.text_field :ii_sem_attd %>
+  </div>
+
+  <div class="field">
+    <%= f.label :iii_sem_attd %>
+    <%= f.text_field :iii_sem_attd %>
+  </div>
+
+  <div class="field">
+    <%= f.label :iv_sem_attd %>
+    <%= f.text_field :iv_sem_attd %>
+  </div>
+
+  <div class="field">
+    <%= f.label :v_sem_attd %>
+    <%= f.text_field :v_sem_attd %>
+  </div>
+
+  <div class="field">
+    <%= f.label :vi_sem_attd %>
+    <%= f.text_field :vi_sem_attd %>
+  </div>
+
+  <div class="field">
+    <%= f.label :vii_sem_attd %>
+    <%= f.text_field :vii_sem_attd %>
+  </div>
+
+  <div class="field">
+    <%= f.label :viii_sem_attd %>
+    <%= f.text_field :viii_sem_attd %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub1_name %>
+    <%= f.text_field :sub1_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub1_mid1 %>
+    <%= f.text_field :sub1_mid1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub1_mid2 %>
+    <%= f.text_field :sub1_mid2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub1_mid3 %>
+    <%= f.text_field :sub1_mid3 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub1_avg %>
+    <%= f.text_field :sub1_avg %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub1_asign %>
+    <%= f.text_field :sub1_asign %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub1_Total %>
+    <%= f.text_field :sub1_Total %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub2_name %>
+    <%= f.text_field :sub2_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub2_mid1 %>
+    <%= f.text_field :sub2_mid1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub2_mid2 %>
+    <%= f.text_field :sub2_mid2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub2_mid3 %>
+    <%= f.text_field :sub2_mid3 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub2_avg %>
+    <%= f.text_field :sub2_avg %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub2_asign %>
+    <%= f.text_field :sub2_asign %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub2_Total %>
+    <%= f.text_field :sub2_Total %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub3_name %>
+    <%= f.text_field :sub3_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub3_mid1 %>
+    <%= f.text_field :sub3_mid1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub3_mid2 %>
+    <%= f.text_field :sub3_mid2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub3_mid3 %>
+    <%= f.text_field :sub3_mid3 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub3_avg %>
+    <%= f.text_field :sub3_avg %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub3_asign %>
+    <%= f.text_field :sub3_asign %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub3_Total %>
+    <%= f.text_field :sub3_Total %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub4_name %>
+    <%= f.text_field :sub4_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub4_mid1 %>
+    <%= f.text_field :sub4_mid1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub4_mid2 %>
+    <%= f.text_field :sub4_mid2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub4_mid3 %>
+    <%= f.text_field :sub4_mid3 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub4_avg %>
+    <%= f.text_field :sub4_avg %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub4_asign %>
+    <%= f.text_field :sub4_asign %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub4_Total %>
+    <%= f.text_field :sub4_Total %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub5_name %>
+    <%= f.text_field :sub5_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub5_mid1 %>
+    <%= f.text_field :sub5_mid1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub5_mid2 %>
+    <%= f.text_field :sub5_mid2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub5_mid3 %>
+    <%= f.text_field :sub5_mid3 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub5_avg %>
+    <%= f.text_field :sub5_avg %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub5_asign %>
+    <%= f.text_field :sub5_asign %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub5_Total %>
+    <%= f.text_field :sub5_Total %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub6_name %>
+    <%= f.text_field :sub6_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub6_mid1 %>
+    <%= f.text_field :sub6_mid1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub6_mid2 %>
+    <%= f.text_field :sub6_mid2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub6_mid3 %>
+    <%= f.text_field :sub6_mid3 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub6_avg %>
+    <%= f.text_field :sub6_avg %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub6_asign %>
+    <%= f.text_field :sub6_asign %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub6_Total %>
+    <%= f.text_field :sub6_Total %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub7_name %>
+    <%= f.text_field :sub7_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub7_mid1 %>
+    <%= f.text_field :sub7_mid1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub7_mid2 %>
+    <%= f.text_field :sub7_mid2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub7_mid3 %>
+    <%= f.text_field :sub7_mid3 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub7_avg %>
+    <%= f.text_field :sub7_avg %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub7_asign %>
+    <%= f.text_field :sub7_asign %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub7_Total %>
+    <%= f.text_field :sub7_Total %>
+  </div>
+
+  <div class="field">
+    <%= f.label :parent_cont_no %>
+    <%= f.number_field :parent_cont_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :parent_mail_id %>
+    <%= f.text_field :parent_mail_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :amc_name %>
+    <%= f.text_field :amc_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :amc_cont_no %>
+    <%= f.number_field :amc_cont_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :student_mail_id %>
+    <%= f.text_field :student_mail_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :student_cont_no %>
+    <%= f.number_field :student_cont_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :placement_status %>
+    <%= f.text_field :placement_status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :placed_in %>
+    <%= f.text_field :placed_in %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sal_package_in_lakhs %>
+    <%= f.text_field :sal_package_in_lakhs %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ssc %>
+    <%= f.text_field :ssc %>
+  </div>
+
+  <div class="field">
+    <%= f.label :inter %>
+    <%= f.text_field :inter %>
+  </div>
+
+  <div class="field">
+    <%= f.label :intermidiate_college_name %>
+    <%= f.text_field :intermidiate_college_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
