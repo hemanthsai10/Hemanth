@@ -1,5 +1,8 @@
 
 <% std=Student.find_by(:pin_no =>params[:id]) %>
+<% if !std.present? %>
+<% std=@student%>
+<%end%>
 <%= std.inspect %>
 
 <!DOCTYPE html>
