@@ -1,24 +1,11 @@
-# README
+This is a small project being built for College Management and for students to serve the purpose of their information like Semester Wise Details, Announcements, Workshops, Events,etc
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Technologies being used for this project are :
 
-Things you may want to cover:
+Ruby on Rails - 2.3.3
+Javascript and Jquery
+Bootstrap
+AngularJS
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Some Gems used for the project :
+Highchart - For displaying information in charts
