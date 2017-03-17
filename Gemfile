@@ -68,3 +68,5 @@ gem 'rack-cors' #For angular and react
 gem 'bower-rails'
 gem 'angularjs-rails'
 gem 'angular-rails-templates'
+
+gem "highcharts-rails" #Highchart graphs and charts

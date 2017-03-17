@@ -18,6 +18,7 @@
 //= require angular-route
 //= require angular-rails-templates
 //= require bootstrap
+//= require highcharts
 //= require_tree ../templates
 
 $(document).ready(function(){ 
