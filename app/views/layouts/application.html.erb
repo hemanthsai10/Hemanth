@@ -6,9 +6,8 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag params[:controller] %>
-    <%= stylesheet_link_tag
-params[:controller] %>
+    <%= javascript_include_tag params[:controller] if Rails.application.assets.find_asset("#{params[:controller]}.js") %>
+    <%= stylesheet_link_tag params[:controller] if Rails.application.assets.find_asset("#{params[:controller]}.css")  %>
   </head>
 
   <body>

@@ -19,122 +19,16 @@
 		    <a href ng-click="tab.setTab(4)">Placement Status</a></li>
 		</ul>
         <div ng-show="tab.isSet(1)">
-        	<div class="panel panel-info">
-			    <div class="panel-heading">Personal Info</div>
-			    <div class="panel-body">
-			    	<div class="form-row">
-			    	<%= "Student Name:  #{std.name.capitalize}" %></div>
-			    	<div class="form-row">
-			    	<%= "Student Pin number:  #{std.pin_no}" %></div>
-			    	<div class="form-row">
-			    	<%= "Parent Contact number:  #{std.parent_cont_no}" %></div>
-			    	<div class="form-row">
-			    	<%= "Parent email address:  #{std.parent_mail_id}" %></div>
-			    	<div class="form-row">
-			    	<%= "Student Mail id:  #{std.student_mail_id}" %></div>
-			    	<div class="form-row">
-			    	<%= "Student Contact number:  #{std.student_cont_no}" %></div>
-			    </div>
-			</div>
-			<div class="panel panel-info">
-			    <div class="panel-heading">AMC & Section Details</div>
-			    <div class="panel-body">
-			    	<%= "Section:  #{std.section}" %>
-			    	<%= "Student:  #{std.amc_name}" %>
-			    	<%= "Student:  #{std.pin_no}" %>
-			    </div>
-			</div>
-        	<div class="panel panel-info">
-			    <div class="panel-heading">SSC and Inter Details</div>
-			    <div class="panel-body">
-			    	<%= "Student:  #{std.ssc}" %>
-			    	<%= "Student:  #{std.inter}" %>
-			    	<%= "Intermidiate College Name:  #{std.intermidiate_college_name}" %>
-			    	<%= "City:  #{std.city}" %>
-			    </div>
-			</div>
+			<%= render partial: "personal_info", locals: { std: std } %>       	
         </div>
         <div ng-show="tab.isSet(2)">
-        	<%= std.name %>
+			<%= render partial: "mids_labs", locals: { std: std } %>       	
         </div>
         <div ng-show="tab.isSet(3)">
-        	<div class="panel panel-info">
-			    <div class="panel-heading">Semester Wise GPA</div>
-			    <div class="panel-body">
-			    	<div class="form-row">
-			    	<strong><%= "Sem I : "%></strong> <%="#{std.i_sem}" %>
-			    	</div>
-			    	<div class="form-row">
-			    	<strong><%= "Sem II : "%></strong> <%="#{std.ii_sem}" %>
-			    	</div>
-			    	<div class="form-row">
-			    	<strong><%= "Sem III : "%></strong> <%="#{std.iii_sem}" %>
-			    	</div>
-			    	<div class="form-row">
-			    	<strong><%= "Sem IV : "%></strong> <%="#{std.iv_sem}" %>
-			    	</div>
-			    	<div class="form-row">
-			    	<strong><%= "Sem V : "%></strong> <%="#{std.v_sem}" %>
-			    	</div>
-			    	<div class="form-row">
-			    	<strong><%= "Sem VI : "%></strong> <%="#{std.vi_sem}" %>
-			    	</div>
-			    	<div class="form-row">
-			    	<strong><%= "Sem VII : "%></strong> <%="#{std.vii_sem}" %>
-			    	</div>
-			    	<div class="form-row">
-			    	<strong><%= "Sem VIII : "%></strong> <%="#{std.viii_sem}" %>
-			    	</div>
-			    </div>
-				</div>
-				        	<div class="panel panel-info">
-			    <div class="panel-heading">Semester Wise Attendance</div>
-			    <div class="panel-body">
-			    	<div class="form-row">
-			    	<strong><%= "Sem I Attendance : "%></strong> <%="#{std.i_sem_attd}" %>
-			    	</div>
-			    	<div class="form-row">
-			    	<strong><%= "Sem II Attendance : "%></strong> <%="#{std.ii_sem_attd}" %>
-			    	</div>
-			    	<div class="form-row">
-			    	<strong><%= "Sem III Attendance : "%></strong> <%="#{std.iii_sem_attd}" %>
-			    	</div>
-			    	<div class="form-row">
-			    	<strong><%= "Sem IV Attendance : "%></strong> <%="#{std.iv_sem_attd}" %>
-			    	</div>
-			    	<div class="form-row">
-			    	<strong><%= "Sem V Attendance : "%></strong> <%="#{std.v_sem_attd}" %>
-			    	</div>
-			    	<div class="form-row">
-			    	<strong><%= "Sem VI Attendance : "%></strong> <%="#{std.vi_sem_attd}" %>
-			    	</div>
-			    	<div class="form-row">
-			    	<strong><%= "Sem VII Attendance : "%></strong> <%="#{std.vii_sem_attd}" %>
-			    	</div>
-			    	<div class="form-row">
-			    	<strong><%= "Sem VIII Attendance : "%></strong> <%="#{std.viii_sem_attd}" %>
-			    	</div>
-			    </div>
-				</div>
-        	</div>
-        	</div>
+			<%= render partial: "semester_wise_info", locals: { std: std } %>       	
         </div>
         <div ng-show="tab.isSet(4)">
-        	<div class="panel panel-info">
-			    <div class="panel-heading">Placement Information</div>
-			    <div class="panel-body">
-			    	<div class="form-row">
-			    	<%= "Placement status:  #{std.placement_status}" %>
-			    	</div>
-			    	<div class="form-row">
-			    	<%= "Placed in:  #{std.placed_in}" %>
-			    	</div>
-			    	<div class="form-row">
-			    	<%= "Salary package in lakhs:  #{std.sal_package_in_lakhs}" %>
-			    	</div>
-			    </div>
-				</div>
-        	</div>
+			<%= render partial: "placement_info", locals: { std: std } %>       	
         </div>
       </section>
   </body>
