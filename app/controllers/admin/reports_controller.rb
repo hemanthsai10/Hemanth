@@ -11,8 +11,10 @@ class Admin::ReportsController < ApplicationController
 	def upload
 		file_data = CSV.read(params['file'].tempfile,:headers=>true)
 		hash = Hash[file_data.headers.map.with_index.to_a]    # => {"a"=>0, "b"=>1, "c"=>2}
+		puts "hash is ----> #{hash}"
 		file_data.each { |studnet_info|
 			std = Student.where(:pin_no => studnet_info[hash['pin no']]).first_or_create
+			puts "this is std --> #{std}"
 			file_data.headers.each do |header|
 				std.update_attributes(header.downcase.gsub(' ', '_') => studnet_info[hash[header]]) if header.present? and Student.column_names.include? header.downcase.gsub(' ', '_')
 			end
