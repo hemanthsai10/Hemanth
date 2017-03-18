@@ -70,3 +70,5 @@ gem 'angularjs-rails'
 gem 'angular-rails-templates'
 
 gem "highcharts-rails" #Highchart graphs and charts
+
+gem 'cloudinary' #For images
