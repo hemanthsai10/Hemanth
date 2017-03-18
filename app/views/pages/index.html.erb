@@ -1,8 +1,46 @@
-<div ng-app="myApp" ng-controller="personCtrl">
-
-First Name: <input type="text" ng-model="firstName"><br>
-Last Name: <input type="text" ng-model="lastName"><br>
-<br>
-Full Name: {{fullName()}}
-
+<!-- We will make a simple accordian with hover effects 
+The markup will have a list with images and the titles-->
+<div class="accordian">
+    <ul>
+		<li>
+			<div class="image_title">
+				<a href="\students\details">Student Information</a>
+			</div>
+			<a href="\students\details">
+				<img src="/images/home_pic1.jpg"/>
+			</a>
+		</li>
+		<li>
+			<div class="image_title">
+				<a href="#">News & Updates</a>
+			</div>
+			<a href="#">
+				<img src="/images/home_pic2.jpg"/>
+			</a>
+		</li>
+		<li>
+			<div class="image_title">
+				<a href="#">Workshops & Events</a>
+			</div>
+			<a href="#">
+				<img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg"/>
+			</a>
+		</li>
+		<li>
+			<div class="image_title">
+				<a href="#">Suggesstions & Complaints</a>
+			</div>
+			<a href="#">
+				<img src="/images/home_pic3.jpg"/>			
+			</a>
+		</li>
+		<li>
+			<div class="image_title">
+				<a href="#">Developers blog</a>
+			</div>
+			<a href="#">
+				<img src="/images/home_pic4.jpg"/>			
+			</a>
+		</li>
+	</ul>
 </div>
