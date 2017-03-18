@@ -1,0 +1,49 @@
+<%= form_for(news) do |f| %>
+  <% if news.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(news.errors.count, "error") %> prohibited this news from being saved:</h2>
+
+      <ul>
+      <% news.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-row form-group field">
+    <%= f.label :title, class:"col-md-6 control-label" %>
+    <%= f.text_field :title, class:"col-md-4 form-control" %>
+  </div>
+
+  <div class="form-row form-group field">
+    <%= f.label :content, class:"col-md-6 control-label" %>
+    <%= f.text_area :content, class:"col-md-4 form-control" %>
+  </div>
+
+  <div class="form-row form-group field">
+    <%= f.label :extra_desc, class:"col-md-6 control-label" %>
+    <%= f.text_area :extra_desc, class:"col-md-4 form-control" %>
+  </div>
+
+  <div class="form-row form-group field">
+    <%= f.label :expire_on, class:"col-md-6 control-label" %>
+    <div class="col-md-7">
+    <%= f.date_select :expire_on %>
+    </div>
+  </div>
+
+  <div class="form-row form-group field">
+    <%= f.label :news_img_name, class:"col-md-6 control-label" %>
+    <%= f.text_field :news_img_name, class:"col-md-4 form-control" %>
+  </div>
+
+  <div class="form-row form-group field">
+    <%= f.label :author, class:"col-md-6 control-label" %>
+    <%= f.text_field :author, class:"col-md-4 form-control" %>
+  </div>
+<br><br><br><br>
+  <div class="form-row form-group actions">
+    <%= f.submit %>
+  </div>
+<% end %>
