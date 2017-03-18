@@ -1,0 +1,78 @@
+/* line 4, C:/Users/Hemanth/Documents/Hemanth/app/assets/stylesheets/pages.scss */
+.blockquote {
+  border-left: none;
+}
+
+/* line 8, C:/Users/Hemanth/Documents/Hemanth/app/assets/stylesheets/pages.scss */
+.quote-badge {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 12, C:/Users/Hemanth/Documents/Hemanth/app/assets/stylesheets/pages.scss */
+.quote-box {
+  overflow: hidden;
+  margin-top: -50px;
+  padding-top: -100px;
+  border-radius: 17px;
+  background-color: #4ADFCC;
+  margin-top: 25px;
+  color: white;
+  width: 200px;
+  box-shadow: 2px 2px 2px 2px #E0E0E0;
+}
+
+/* line 26, C:/Users/Hemanth/Documents/Hemanth/app/assets/stylesheets/pages.scss */
+.quotation-mark {
+  margin-top: -4px;
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+  font-family: "Times New Roman", Georgia, Serif;
+}
+
+/* line 36, C:/Users/Hemanth/Documents/Hemanth/app/assets/stylesheets/pages.scss */
+.quote-text {
+  font-size: 12px;
+  margin-top: -55px;
+}
+
+@media (min-width: 768px) {
+  /* line 43, C:/Users/Hemanth/Documents/Hemanth/app/assets/stylesheets/pages.scss */
+  .home_column {
+    float: left;
+    width: 80%;
+    overflow: hidden;
+    padding-left: 40px;
+  }
+
+  /* line 49, C:/Users/Hemanth/Documents/Hemanth/app/assets/stylesheets/pages.scss */
+  .grid-divider {
+    position: relative;
+    padding: 0;
+  }
+
+  /* line 53, C:/Users/Hemanth/Documents/Hemanth/app/assets/stylesheets/pages.scss */
+  .grid-divider > [class*='col-'] {
+    position: static;
+  }
+
+  /* line 56, C:/Users/Hemanth/Documents/Hemanth/app/assets/stylesheets/pages.scss */
+  .grid-divider > [class*='col-']:nth-child(n+2):before {
+    content: "";
+    border-left: 1px solid #DDD;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+
+  /* line 63, C:/Users/Hemanth/Documents/Hemanth/app/assets/stylesheets/pages.scss */
+  .col-padding {
+    padding: 0 15px;
+  }
+}
+/* line 70, C:/Users/Hemanth/Documents/Hemanth/app/assets/stylesheets/pages.scss */
+.quote-b {
+  float: left;
+  width: 20%;
+  overflow: hidden;
+}
