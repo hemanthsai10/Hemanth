@@ -44,3 +44,28 @@ The markup will have a list with images and the titles-->
 		</li>
 	</ul>
 </div>
+<div class="container">
+    <blockquote class="quote-box">
+      <p class="quotation-mark">
+        “
+      </p>
+      <p class="quote-text">
+      <% @quote[:content]["<p>"]="" %>
+      <% @quote[:content]["</p>"]="" %>
+
+		<%=  @quote[:content].html_safe %>      
+		</p>
+      <hr>
+      <div class="blog-post-actions">
+        <p class="blog-post-bottom pull-left">
+          <%=  @quote[:title] %>
+        </p>
+        <p class="blog-post-bottom pull-right">
+          <span class="badge quote-badge">896</span>  ❤
+        </p>
+      </div>
+    </blockquote>
+</div>
+<style type="text/css">
+
+</style>

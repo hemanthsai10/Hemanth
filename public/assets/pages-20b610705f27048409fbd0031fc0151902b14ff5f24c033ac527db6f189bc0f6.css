@@ -1,0 +1,37 @@
+/* line 4, C:/Users/Hemanth/Documents/Hemanth/app/assets/stylesheets/pages.scss */
+.blockquote {
+  border-left: none;
+}
+
+/* line 8, C:/Users/Hemanth/Documents/Hemanth/app/assets/stylesheets/pages.scss */
+.quote-badge {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 12, C:/Users/Hemanth/Documents/Hemanth/app/assets/stylesheets/pages.scss */
+.quote-box {
+  overflow: hidden;
+  margin-top: -50px;
+  padding-top: -100px;
+  border-radius: 17px;
+  background-color: #4ADFCC;
+  margin-top: 25px;
+  color: white;
+  width: 200px;
+  box-shadow: 2px 2px 2px 2px #E0E0E0;
+}
+
+/* line 26, C:/Users/Hemanth/Documents/Hemanth/app/assets/stylesheets/pages.scss */
+.quotation-mark {
+  margin-top: -4px;
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+  font-family: "Times New Roman", Georgia, Serif;
+}
+
+/* line 36, C:/Users/Hemanth/Documents/Hemanth/app/assets/stylesheets/pages.scss */
+.quote-text {
+  font-size: 12px;
+  margin-top: -55px;
+}
