@@ -3,4 +3,4 @@ rails generate scaffold student pin_no:integer section:string name:string cgpa:f
 
 Cloudinary::Uploader.unsigned_upload("home_pic1.jpg", "vgh27rxe", :cloud_name => "hemanthnhs")
 
-rails generate scaffold workshop title:string organized_by:string organizing_member:string description:text additional_desc:text image:string register_link:string workshop_date:date expire_on:date
+rails generate scaffold workshop title:string organized_by:string organizing_member:string description:text additional_desc:text image:string register_link:string workshop_date:date expire_on:date category:string

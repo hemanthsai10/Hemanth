@@ -7,4 +7,8 @@ require 'net/http'
   	@quote = @quote[0]
   	puts "result is #{@quote}"
   end
+
+  def contact
+  	
+  end
 end
