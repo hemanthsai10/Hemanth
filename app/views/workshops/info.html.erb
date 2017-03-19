@@ -1,4 +1,4 @@
-<% workshops= Workshop.all %>
+<% workshops= Workshop.where('expire_on > ?', Date.today) %>
 <div class="container">
     <div class="row">
         <p><h4>Workshops and events are always fun to attend and explore. Enroll in these upcoming workshops</h4></p>
