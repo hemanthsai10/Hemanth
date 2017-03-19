@@ -1,0 +1,67 @@
+<%= form_for(workshop) do |f| %>
+  <% if workshop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(workshop.errors.count, "error") %> prohibited this workshop from being saved:</h2>
+
+      <ul>
+      <% workshop.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :organized_by %>
+    <%= f.text_field :organized_by %>
+  </div>
+
+  <div class="field">
+    <%= f.label :organizing_member %>
+    <%= f.text_field :organizing_member %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :additional_desc %>
+    <%= f.text_area :additional_desc %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :register_link %>
+    <%= f.text_field :register_link %>
+  </div>
+
+  <div class="field">
+    <%= f.label :workshop_date %>
+    <%= f.date_select :workshop_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :expire_on %>
+    <%= f.date_select :expire_on %>
+  </div>
+
+  <div class="field">
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

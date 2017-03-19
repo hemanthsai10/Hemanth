@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  organized_by: MyString
+  organizing_member: MyString
+  description: MyText
+  additional_desc: MyText
+  image: MyString
+  register_link: MyString
+  workshop_date: 2017-03-19
+  expire_on: 2017-03-19
+  category: MyString
+
+two:
+  title: MyString
+  organized_by: MyString
+  organizing_member: MyString
+  description: MyText
+  additional_desc: MyText
+  image: MyString
+  register_link: MyString
+  workshop_date: 2017-03-19
+  expire_on: 2017-03-19
+  category: MyString
