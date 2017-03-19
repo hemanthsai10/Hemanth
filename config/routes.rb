@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :workshops
+  resources :workshops do
+    get :info, :on => :collection
+  end
   resources :news do
     get :info, :on => :collection
   end

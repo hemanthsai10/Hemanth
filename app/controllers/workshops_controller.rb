@@ -21,6 +21,8 @@ class WorkshopsController < ApplicationController
   def edit
   end
 
+  def info
+  end
   # POST /workshops
   # POST /workshops.json
   def create
