@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :news
+  resources :news do
+    get :info, :on => :collection
+  end
   	get 'pages/index'
  	root 'pages#index'
   namespace :admin do

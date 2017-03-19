@@ -21,6 +21,9 @@ class NewsController < ApplicationController
   def edit
   end
 
+  def info
+  end
+
   # POST /news
   # POST /news.json
   def create
