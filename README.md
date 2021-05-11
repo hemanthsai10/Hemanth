@@ -1,6 +1,6 @@
-This is a small project being built for College Management and for students to serve the purpose of their information like Semester Wise Details, Announcements, Workshops, Events,etc
+This is a project built for University Management and for students to retrieve/access information like Semester Details, Announcements, Workshops, Events,etc
 
-Technologies being used for this project are :
+Technologies used for this project are :
 
 Ruby on Rails - 2.3.3
 Javascript and Jquery
